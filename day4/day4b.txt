@@ -1,0 +1,13 @@
+from sys import stdin
+
+count = 0
+
+for data in stdin:
+  A = int(data.split(',')[0].split('-')[0])
+  B = int(data.split(',')[0].split('-')[1])
+  X = int(data.split(',')[1].split('-')[0])
+  Y = int(data.split(',')[1].split('-')[1])
+  if ((A >= X) & (A <= Y)) | ((B >= X) & (B <= Y)) | ((X >= A) & (X <= B)) | ((Y >= A) & (Y <= B)): 
+    count = count+1
+print(count)
+
